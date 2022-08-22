@@ -3,6 +3,8 @@ package advent.code;
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
+
+        AdventTask01 task01 = new AdventTask01();
+        task01.compare02();
     }
 }
