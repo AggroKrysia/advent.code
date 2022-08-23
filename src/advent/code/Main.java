@@ -4,7 +4,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        AdventTask01 task01 = new AdventTask01();
-        task01.compare02();
+        AdventTask02 task01 = new AdventTask02();
+        task01.compare01();
     }
 }

@@ -8,14 +8,14 @@ import java.util.Iterator;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
-public class AdventTask01 {
+public class AdventTask02 {
 
     private final IntStream streamOfInt;
     Path path = Paths.get("D:\\IdeaProjects\\Codevent1\\src\\advent\\code\\measurement.txt");
     Stream<String> streamOfString;
 
 
-    AdventTask01() {
+    AdventTask02() {
         try {
             streamOfString = Files.lines(path);
         } catch (IOException e) {
@@ -27,25 +27,19 @@ public class AdventTask01 {
 
     }
 
-
-    public void printFirst() {
-        System.out.println(streamOfInt.iterator().next().toString());
-    }
-
-    public void printAll() {
-        streamOfInt.forEach(System.out::println);
-        //(s -> System.out.println(s))
-    }
-
     public void compare01() {
         Iterator<Integer> it = streamOfInt.iterator();
         int counter = 0;
-        Integer current = it.next();
-        Integer prev = 0;
+        Integer A = it.next();
+        Integer B = it.next();
+        Integer C = it.next();
+        int sumprev = 0;
         while (it.hasNext()) {
-            prev = current;
-            current = it.next();
-            if (prev < current) {
+            sumprev = A + B + C;
+            A = B;
+            B = C;
+            C = it.next();
+            if (sumprev < A + B + C) {
                 counter++;
             }
 
@@ -53,16 +47,4 @@ public class AdventTask01 {
         System.out.println(counter);
     }
 
-    public void compare02() {
-        int[] array = streamOfInt.toArray();
-        int current = array[0];
-        int counter = 0;
-        for (int i = 1; i < array.length; i++) {
-            if (current < array[i]) {
-                counter++;
-            }
-            current = array[i];
-        }
-        System.out.println(counter);
-    }
 }
