@@ -1,10 +1,13 @@
 package advent.code;
 
+import advent.code.task3.AdventTask03;
+
 public class Main {
 
     public static void main(String[] args) {
 
-        AdventTask02 task01 = new AdventTask02();
-        task01.compare01();
+        AdventTask03 task01 = new AdventTask03();
+        task01.createListOfMovements();
+        task01.sumOfMovement();
     }
 }
