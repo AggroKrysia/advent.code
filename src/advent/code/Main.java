@@ -1,12 +1,12 @@
 package advent.code;
 
-import advent.code.task3.AdventTask03;
+import advent.code.task3.AdventTask04;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        AdventTask03 task01 = new AdventTask03();
+        AdventTask04 task01 = new AdventTask04();
         task01.createListOfMovements();
         task01.sumOfMovement();
     }
